@@ -1,0 +1,70 @@
+<mxfile host="app.diagrams.net" modified="2024-07-05T13:26:09.951Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="NoKesmMsJ04m1DcmusTV" version="24.6.4" type="device">
+  <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
+    <mxGraphModel dx="1272" dy="541" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ILK-Kr9-qPaNdmk5thBq-1" value="&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px; white-space: pre;&quot;&gt;&lt;font style=&quot;background-color: rgb(0, 0, 153);&quot; color=&quot;#ffffff&quot;&gt;Audio Buffer&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px; white-space: pre;&quot;&gt;&lt;font style=&quot;background-color: rgb(0, 0, 153);&quot; color=&quot;#ffffff&quot;&gt;Input node&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000099;" parent="1" vertex="1">
+          <mxGeometry x="20" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ILK-Kr9-qPaNdmk5thBq-2" value="&lt;span style=&quot;background-color: rgb(0, 0, 153);&quot;&gt;&lt;font color=&quot;#ffffff&quot;&gt;Gain node&lt;/font&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000099;" parent="1" vertex="1">
+          <mxGeometry x="160" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ILK-Kr9-qPaNdmk5thBq-3" value="&lt;span style=&quot;background-color: rgb(0, 0, 153);&quot;&gt;&lt;font color=&quot;#ffffff&quot;&gt;Stereo Panner&lt;/font&gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(0, 0, 153);&quot;&gt;&lt;font color=&quot;#ffffff&quot;&gt;node&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000099;" parent="1" vertex="1">
+          <mxGeometry x="300" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ILK-Kr9-qPaNdmk5thBq-4" value="&lt;span style=&quot;background-color: rgb(0, 0, 153);&quot;&gt;&lt;font color=&quot;#ffffff&quot;&gt;Context Destination&lt;/font&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000099;strokeColor=#000099;" parent="1" vertex="1">
+          <mxGeometry x="440" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ILK-Kr9-qPaNdmk5thBq-5" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ILK-Kr9-qPaNdmk5thBq-1" target="ILK-Kr9-qPaNdmk5thBq-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="250" as="sourcePoint" />
+            <mxPoint x="450" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ILK-Kr9-qPaNdmk5thBq-6" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ILK-Kr9-qPaNdmk5thBq-2" target="ILK-Kr9-qPaNdmk5thBq-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="250" as="sourcePoint" />
+            <mxPoint x="450" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ILK-Kr9-qPaNdmk5thBq-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ILK-Kr9-qPaNdmk5thBq-3" target="ILK-Kr9-qPaNdmk5thBq-4" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="250" as="sourcePoint" />
+            <mxPoint x="450" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ILK-Kr9-qPaNdmk5thBq-8" value="&lt;span style=&quot;background-color: rgb(229, 204, 255);&quot;&gt;File&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(229, 204, 255);&quot;&gt;tau.wav&lt;/span&gt;&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;fillColor=#E5CCFF;" parent="1" vertex="1">
+          <mxGeometry x="180" y="100" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ILK-Kr9-qPaNdmk5thBq-9" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="ILK-Kr9-qPaNdmk5thBq-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="100" as="sourcePoint" />
+            <mxPoint x="670" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ILK-Kr9-qPaNdmk5thBq-11" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#000000;shadow=0;dashed=0;shape=mxgraph.ios7.icons.volume_2;pointerEvents=1;fillColor=#E5CCFF;" parent="1" vertex="1">
+          <mxGeometry x="484.85" y="90" width="55.15" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ILK-Kr9-qPaNdmk5thBq-14" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="ILK-Kr9-qPaNdmk5thBq-4" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="90" as="sourcePoint" />
+            <mxPoint x="501" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ILK-Kr9-qPaNdmk5thBq-15" value="Speaker" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="470" y="140" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="l-oMlJ-RefhvAmtAjH_0-1" value="Audio Buffer" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#E5CCFF;" parent="1" vertex="1">
+          <mxGeometry x="20" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l-oMlJ-RefhvAmtAjH_0-2" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ILK-Kr9-qPaNdmk5thBq-8" target="l-oMlJ-RefhvAmtAjH_0-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="320" as="sourcePoint" />
+            <mxPoint x="460" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
