@@ -60,9 +60,9 @@ export 'package:tauwa/public/rust/api/media_element.dart';
 
 /// This is the Main class for the τ Plugin.
 /// Tau() or [tau] is a Singleton.
-/// The module is automatically inited, thanks to the static variable [tau].
+/// The module is automatically inited, thanks to the static variable [tauwa].
 class Tauwa {
-  /// Tau() and [tau] are synonymous.
+  /// Tauwa() and [tauwa] are synonymous.
   static final Tauwa tauwa = Tauwa._internal();
 
   /// Tau() is a singleton

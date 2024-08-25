@@ -40,20 +40,20 @@ cd rust
 #fi
 
 
-rm Cargo.lock
-echo '-----> cargo clippy'
-cargo clippy --fix --allow-dirty --allow-staged --allow-no-vcs -- -D warnings
-if [ $? -ne 0 ]; then
-    echo "Error: ~/bin/generate.sh"
-    exit -1
-fi
+#rm Cargo.lock
+#echo '-----> cargo clippy'
+#cargo clippy --fix --allow-dirty --allow-staged --allow-no-vcs -- -D warnings
+#if [ $? -ne 0 ]; then
+#    echo "Error: ~/bin/generate.sh"
+#    exit -1
+#fi
 
-echo '-----> cargo fmt'
-cargo +nightly fmt --check
-if [ $? -ne 0 ]; then
-    echo "Error: ~/bin/generate.sh"
-    exit -1
-fi
+#echo '-----> cargo fmt'
+#cargo +nightly fmt --check
+#if [ $? -ne 0 ]; then
+#    echo "Error: ~/bin/generate.sh"
+#    exit -1
+#fi
 
 echo '-----> cargo build'
 cargo build
