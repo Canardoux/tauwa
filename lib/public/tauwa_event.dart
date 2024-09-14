@@ -16,6 +16,7 @@
  * along with τ.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-export 'public/tauwa_interface.dart';
-export 'public/tauwa_metaclass.dart';
-export 'public/tauwa_event.dart';
+class EventTarget
+{
+        
+}

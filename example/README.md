@@ -1,6 +1,6 @@
-# hello_rust_ffi_plugin_example
+# example
 
-Demonstrates how to use the hello_rust_ffi_plugin plugin.
+Simple examples to show how to use tauwa
 
 ## Getting Started
 

@@ -1,70 +1,45 @@
-/*
- * Copyright 2024 Canardoux.
- *
- * This file is part of the τ Project.
- *
- * τ (Tau) is free software: you can redistribute it and/or modify
- * it under the terms of the Mozilla Public License version 2 (MPL2.0),
- * as published by the Mozilla organization.
- *
- * τ is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * MPL General Public License for more details.
- *
- * This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at https://mozilla.org/MPL/2.0/.
- */
-
 import 'package:flutter/material.dart';
-//import 'RustEx/rust_ex.dart';
-import 'ex_driver.dart';
 import 'package:tauwa/tauwa.dart';
-import 'package:logger/logger.dart' as lg;
+ 
 
 void main() {
-  Tauwa().init(lev: lg.Level.trace);
-  runApp(const ExamplesApp());
+  runApp(const MyApp());
 }
 
-///
-class Example {}
-
-///
-class ExamplesApp extends StatelessWidget {
-  const ExamplesApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Sound Examples',
+      title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
         //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
+        // TRY THIS: Try running your application with "flutter run". You'll see
+        // the application has a purple toolbar. Then, without quitting the app,
+        // try changing the seedColor in the colorScheme below to Colors.green
+        // and then invoke "hot reload" (save your changes or press the "hot
+        // reload" button in a Flutter-supported IDE, or press "r" if you used
+        // the command line to start the app).
+        //
         // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-        // This makes the visual density adapt to the platform that you run
-        // the app on. For desktop platforms, the controls will be smaller and
-        // closer together (more dense) than on mobile platforms.
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        // state is not lost during the reload. To reset the state, use hot
+        // restart instead.
+        //
+        // This works for code too, not just values: Most code changes can be
+        // tested with just a hot reload.
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
-      home: const ExamplesAppHomePage(title: 'τ (Tau) Examples'),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
-///
-class ExamplesAppHomePage extends StatefulWidget {
-  ///
-  const ExamplesAppHomePage({super.key, this.title});
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -75,92 +50,78 @@ class ExamplesAppHomePage extends StatefulWidget {
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
 
-  ///
-  final String? title;
+  final String title;
 
   @override
-  State<ExamplesAppHomePage> createState() => _ExamplesHomePageState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _ExamplesHomePageState extends State<ExamplesAppHomePage> {
-  @override
-  void initState() {
-    super.initState();
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      // This call to setState tells the Flutter framework that something has
+      // changed in this State, which causes it to rerun the build method below
+      // so that the display can reflect the updated values. If we changed
+      // _counter without calling setState(), then the build method would not be
+      // called again, and so nothing would appear to happen.
+      _counter++;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    Widget makeBody() {
-      return Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Center(
-            child: ElevatedButton(
-                child: const Text(
-                  'Mozilla',
-                ),
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const ExDriver(mod: 'Mozilla')));
-                }),
-          ),
-          Center(
-            child: ElevatedButton(
-              child: const Text(
-                'W3C',
-              ),
-              onPressed: () {
-                // Navigator.of(context).push(
-                //     MaterialPageRoute(builder: (context) => W3CExamples()));
-              },
-            ),
-          ),
-          Center(
-            child: ElevatedButton(
-              child: const Text(
-                'Rust - Web Audio API',
-              ),
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const ExDriver(mod: 'Rust')));
-              },
-            ),
-          ),
-          Center(
-            child: ElevatedButton(
-              child: const Text(
-                'Flutter Sound - examples',
-              ),
-              onPressed: () {
-                // Navigator.of(context).push(
-                //    MaterialPageRoute(builder: (context) => FlutterSoundExamples()));
-              },
-            ),
-          ),
-        ],
-      );
-    }
-
+    // This method is rerun every time setState is called, for instance as done
+    // by the _incrementCounter method above.
+    //
+    // The Flutter framework has been optimized to make rerunning build methods
+    // fast, so that you can just rebuild anything that needs updating rather
+    // than having to individually change instances of widgets.
     return Scaffold(
-      backgroundColor: Colors.blue,
       appBar: AppBar(
-        title: const Text('Plugin example app'),
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(
-              Icons.stop,
-              color: Colors.white,
+        // TRY THIS: Try changing the color here to a specific color (to
+        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
+        // change color while the other colors stay the same.
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        // Here we take the value from the MyHomePage object that was created by
+        // the App.build method, and use it to set our appbar title.
+        title: Text(widget.title),
+      ),
+      body: Center(
+        // Center is a layout widget. It takes a single child and positions it
+        // in the middle of the parent.
+        child: Column(
+          // Column is also a layout widget. It takes a list of children and
+          // arranges them vertically. By default, it sizes itself to fit its
+          // children horizontally, and tries to be as tall as its parent.
+          //
+          // Column has various properties to control how it sizes itself and
+          // how it positions its children. Here we use mainAxisAlignment to
+          // center the children vertically; the main axis here is the vertical
+          // axis because Columns are vertical (the cross axis would be
+          // horizontal).
+          //
+          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
+          // action in the IDE, or press "p" in the console), to see the
+          // wireframe for each widget.
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text(
+              'You have pushed the button this many times:',
             ),
-            onPressed: () {
-              // do something
-            },
-          ),
-        ],
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+          ],
+        ),
       ),
-      body: makeBody(),
-      bottomNavigationBar: const BottomAppBar(
-        color: Colors.blue,
-      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
