@@ -16,8 +16,8 @@
  * along with τ.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-
 import 'tauwa_interface.dart';
+import 'tauwa_event.dart';
 
 abstract class tauwa_metaclass
 {

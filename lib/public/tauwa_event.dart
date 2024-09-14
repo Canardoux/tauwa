@@ -15,8 +15,79 @@
  * You should have received a copy of the GNU General Public License
  * along with τ.  If not, see <https://www.gnu.org/licenses/>.
  */
+ 
 
+// See [Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/Event)
 class EventTarget
 {
         
+}
+
+class EventHandler
+{
+
+}
+
+class Event
+{
+
+}
+
+class EventInit
+{
+
+}
+
+class HTMLMediaElement // Not the correct place for that !!!!!
+{
+
+}
+
+class MediaStream // Not the correct place for that !!!!
+{
+
+}
+
+class MediaStreamTrack // Not the correct place for that !!!!
+{
+
+}
+
+class Worklet
+{
+
+}
+
+class WorkletGlobalScope
+{
+
+}
+
+class MessagePort
+{
+
+}
+
+class factAudioSinkOptionsory
+{
+
+}
+class facAudioBufferSourceOptionsory
+{
+
+}
+
+class facChannelMergerNodetory
+{
+
+}
+
+class factConstantSourceOptionsry
+{
+
+}
+
+class factoConvolverOptionsry
+{
+
 }

@@ -12,29 +12,35 @@
 
 library;
 
+import 'dart:typed_data';
 import 'tauwa_event.dart';
 
 
+typedef JSAny = Object;
+typedef JSNumber = num;
+typedef JSArray<T> = List<T>;
+typedef JSPromise<T> = Future<T>;
+typedef JSArrayBuffer = ByteBuffer;
+typedef JSFloat32Array = Float32List;
+typedef JSObject = Object;
+typedef JSUint8Array = Uint8List;
+typedef DOMHighResTimeStamp = double;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+typedef DecodeErrorCallback = Function;
+typedef DecodeSuccessCallback = Function;
+typedef AudioWorkletProcessorConstructor = Function;
+typedef AudioContextState = String;
+typedef AudioContextRenderSizeCategory = String;
+typedef AudioContextLatencyCategory = String;
+typedef AudioSinkType = String;
+typedef ChannelCountMode = String;
+typedef ChannelInterpretation = String;
+typedef AutomationRate = String;
+typedef BiquadFilterType = String;
+typedef OscillatorType = String;
+typedef PanningModelType = String;
+typedef DistanceModelType = String;
+typedef OverSampleType = String;
 
 /// The `BaseAudioContext` of the
 /// [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
@@ -2036,7 +2042,7 @@ abstract class DynamicsCompressorNode implements AudioNode {
   /// `0` and `1`.
   AudioParam get release;
 }
-abstract class DynamicsCompressorOptions implements AudioNodeOptions, JSObject {
+abstract class DynamicsCompressorOptions implements AudioNodeOptions {
 
   double get attack;
   set attack(num value);
