@@ -22,50 +22,85 @@ import 'tauwa_event.dart';
 abstract class tauwa_metaclass
 {
     AudioContext newAudioContext([AudioContextOptions contextOptions]);
+
+
+
+
     AudioContextOptions newAudioContextOptions({
-    JSAny latencyHint,
+    TauAny latencyHint,
     num sampleRate,
-    JSAny sinkId,
-    JSAny renderSizeHint,
+    TauAny sinkId,
+    TauAny renderSizeHint,
   });
 
+
+
   factAudioSinkOptionsory newAudioSinkOptions({required AudioSinkType type});
+
+
+
   AudioTimestamp newAudioTimestamp({
     num contextTime,
     DOMHighResTimeStamp performanceTime,
   });
+
+
+
   OfflineAudioContext newOfflineAudioContext(
-    JSAny contextOptionsOrNumberOfChannels, [
+    TauAny contextOptionsOrNumberOfChannels, [
     int length,
     num sampleRate,
   ]);
+
+
+
+
 
   OfflineAudioCompletionEvent newOfflineAudioCompletionEvent(
     String type,
     OfflineAudioCompletionEventInit eventInitDict,
   );
+
+
+
+
   OfflineAudioCompletionEventInit newOfflineAudioCompletionEventInit({
     bool bubbles,
     bool cancelable,
     bool composed,
     required AudioBuffer renderedBuffer,
   });
+
+
+
   AudioBuffer newAudioBuffer(AudioBufferOptions options);
+
+
+
 
   AudioBufferOptions newAudioBufferOptions({
     int numberOfChannels,
     required int length,
     required num sampleRate,
   });
+
+
+
   AudioNodeOptions newAudioNodeOptions({
     int channelCount,
     ChannelCountMode newchannelCountMode,
     ChannelInterpretation channelInterpretation,
   });
+
+
+
   AnalyserNode newAnalyserNode(
     BaseAudioContext context, [
     AnalyserOptions options,
   ]);
+
+
+
   AnalyserOptions newAnalyserOptions({
     int channelCount,
     ChannelCountMode channelCountMode,
@@ -75,10 +110,16 @@ abstract class tauwa_metaclass
     num minDecibels,
     num smoothingTimeConstant,
   });
+
+
+
   AudioBufferSourceNode newAudioBufferSourceNode(
     BaseAudioContext context, [
     AudioBufferSourceOptions options,
   ]);
+
+
+
 
   facAudioBufferSourceOptionsory newAudioBufferSourceOptions({
     AudioBuffer? buffer,
@@ -88,10 +129,16 @@ abstract class tauwa_metaclass
     num loopStart,
     num playbackRate,
   });
+
+
+
   AudioProcessingEvent newAudioProcessingEvent(
     String type,
     AudioProcessingEventInit eventInitDict,
   );
+
+
+
   AudioProcessingEventInit newAudioProcessingEventInit({
     bool bubbles,
     bool cancelable,
@@ -101,10 +148,16 @@ abstract class tauwa_metaclass
     required AudioBuffer outputBuffer,
   });
 
+
+
+
   BiquadFilterNode newBiquadFilterNode(
     BaseAudioContext context, [
     BiquadFilterOptions options,
   ]);
+
+
+
   BiquadFilterOptions newBiquadFilterOptions({
     int channelCount,
     ChannelCountMode channelCountMode,
@@ -115,35 +168,56 @@ abstract class tauwa_metaclass
     num frequency,
     num gain,
   });
+
+
+
   facChannelMergerNodetory newChannelMergerNode(
     BaseAudioContext context, [
     ChannelMergerOptions options,
   ]);
+
+
+
  ChannelMergerOptions newChannelMergerOptions({
     int channelCount,
     ChannelCountMode channelCountMode,
     ChannelInterpretation channelInterpretation,
     int numberOfInputs,
   });
+
+
+
   ChannelSplitterNode newChannelSplitterNode(
     BaseAudioContext context, [
     ChannelSplitterOptions options,
   ]);
+
+
+
   ChannelSplitterOptions newChannelSplitterOptions({
     int channelCount,
     ChannelCountMode channelCountMode,
     ChannelInterpretation channelInterpretation,
     int numberOfOutputs,
   });
+
+
+
   ConstantSourceNode newConstantSourceNode(
     BaseAudioContext context, [
     ConstantSourceOptions options,
   ]);
+
+
+
   factConstantSourceOptionsry newConstantSourceOptions({num offset});
   ConvolverNode newConvolverNode(
     BaseAudioContext context, [
     ConvolverOptions options,
   ]);
+
+
+
   factoConvolverOptionsry newConvolverOptions({
     int channelCount,
     ChannelCountMode channelCountMode,
@@ -151,10 +225,16 @@ abstract class tauwa_metaclass
     AudioBuffer? buffer,
     bool disableNormalization,
   });
+
+
+
   DelayNode newDelayNode(
     BaseAudioContext context, [
     DelayOptions options,
   ]);
+
+
+
   DelayOptions newDelayOptions({
     int channelCount,
     ChannelCountMode channelCountMode,
@@ -162,10 +242,16 @@ abstract class tauwa_metaclass
     num maxDelayTime,
     num delayTime,
   });
+
+
+
   DynamicsCompressorNode newDynamicsCompressorNode(
     BaseAudioContext context, [
     DynamicsCompressorOptions options,
   ]);
+
+
+
   DynamicsCompressorOptions newDynamicsCompressorOptions({
     int channelCount,
     ChannelCountMode channelCountMode,
@@ -176,20 +262,32 @@ abstract class tauwa_metaclass
     num release,
     num threshold,
   });
+
+
+
   GainNode newGainNode(
     BaseAudioContext context, [
     GainOptions options,
   ]);
+
+
+
   GainOptions newGainOptions({
     int channelCount,
     ChannelCountMode channelCountMode,
     ChannelInterpretation channelInterpretation,
     num gain,
   });
+
+
+
   IIRFilterNode newIIRFilterNode(
     BaseAudioContext context,
     IIRFilterOptions options,
   );
+
+
+
   IIRFilterOptions newIIRFilterOptions({
     int channelCount,
     ChannelCountMode channelCountMode,
@@ -197,35 +295,62 @@ abstract class tauwa_metaclass
     required JSArray<JSNumber> feedforward,
     required JSArray<JSNumber> feedback,
   });
+
+
+
   MediaElementAudioSourceNode newMediaElementAudioSourceNode(
     AudioContext context,
     MediaElementAudioSourceOptions options,
   );
+
+
+
   MediaElementAudioSourceOptions newMediaElementAudioSourceOptions(
       {required HTMLMediaElement mediaElement});
+
+
+
 
   MediaStreamAudioDestinationNode newMediaStreamAudioDestinationNode(
     AudioContext context, [
     AudioNodeOptions options,
   ]);
+
+
+
   MediaStreamAudioSourceNode newMediaStreamAudioSourceNode(
     AudioContext context,
     MediaStreamAudioSourceOptions options,
   );
+
+
+
   MediaStreamAudioSourceOptions newMediaStreamAudioSourceOptions(
       {required MediaStream mediaStream});
+
+
+
 
   MediaStreamTrackAudioSourceNode newMediaStreamTrackAudioSourceNode(
     AudioContext context,
     MediaStreamTrackAudioSourceOptions options,
   );
+
+
+
   MediaStreamTrackAudioSourceOptions newMediaStreamTrackAudioSourceOptions(
       {required MediaStreamTrack mediaStreamTrack});
+
+
+
 
   OscillatorNode newOscillatorNode(
     BaseAudioContext context, [
     OscillatorOptions options,
   ]);
+
+
+
   OscillatorOptions newOscillatorOptions({
     int channelCount,
     ChannelCountMode channelCountMode,
@@ -235,10 +360,16 @@ abstract class tauwa_metaclass
     num detune,
     PeriodicWave periodicWave,
   });
+
+
+
   PannerNode newPannerNode(
     BaseAudioContext context, [
     PannerOptions options,
   ]);
+
+
+
 
   PannerOptions newPannerOptions({
     int channelCount,
@@ -259,10 +390,16 @@ abstract class tauwa_metaclass
     num coneOuterAngle,
     num coneOuterGain,
   });
+
+
+
   PeriodicWave newPeriodicWave(
     BaseAudioContext context, [
     PeriodicWaveOptions options,
   ]);
+
+
+
   PeriodicWaveConstraints newPeriodicWaveConstraints({bool disableNormalization});
   PeriodicWaveOptions newPeriodicWaveOptions({
     bool disableNormalization,
@@ -270,20 +407,32 @@ abstract class tauwa_metaclass
     JSArray<JSNumber> imag,
   });
 
+
+
+
   StereoPannerNode newStereoPannerNode(
     BaseAudioContext context, [
     StereoPannerOptions options,
   ]);
+
+
+
   StereoPannerOptions newStereoPannerOptions({
     int channelCount,
     ChannelCountMode channelCountMode,
     ChannelInterpretation channelInterpretation,
     num pan,
   });
+
+
+
   WaveShaperNode newWaveShaperNode(
     BaseAudioContext context, [
     WaveShaperOptions options,
   ]);
+
+
+
   WaveShaperOptions newWaveShaperOptions({
     int channelCount,
     ChannelCountMode channelCountMode,
@@ -291,11 +440,17 @@ abstract class tauwa_metaclass
     JSArray<JSNumber> curve,
     OverSampleType oversample,
   });
+
+
+
  AudioWorkletNode newAudioWorkletNode(
     BaseAudioContext context,
     String name, [
     AudioWorkletNodeOptions options,
   ]);
+
+
+
   AudioWorkletNodeOptions newAudioWorkletNodeOptions({
     int channelCount,
     ChannelCountMode channelCountMode,
@@ -306,13 +461,19 @@ abstract class tauwa_metaclass
     JSObject parameterData,
     JSObject processorOptions,
   });
+
+
+
   AudioWorkletProcessor newAudioWorkletProcessor();
+
+
+
 
   OfflineAudioContextOptions newOfflineAudioContextOptions({
     int numberOfChannels,
     required int length,
     required num sampleRate,
-    JSAny renderSizeHint,
+    TauAny renderSizeHint,
   });
 
 }
