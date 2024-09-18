@@ -17,5 +17,5 @@
  */
 
 export 'public/tauwa_interface.dart';
-export 'public/tauwa_metaclass.dart';
+export 'public/tauwa_class.dart';
 export 'public/tauwa_event.dart';
