@@ -67,27 +67,3 @@ class MessagePort
 {
 
 }
-
-class factAudioSinkOptionsory
-{
-
-}
-class facAudioBufferSourceOptionsory
-{
-
-}
-
-class facChannelMergerNodetory
-{
-
-}
-
-class factConstantSourceOptionsry
-{
-
-}
-
-class factoConvolverOptionsry
-{
-
-}

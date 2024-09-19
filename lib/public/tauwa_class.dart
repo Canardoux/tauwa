@@ -547,13 +547,12 @@ abstract class AudioContextOptions implements EventTarget {
 
 
 
-abstract class AudioSinkOptions {
+class AudioSinkOptions
+{
+  //AudioSinkType get type;
+  //set type(AudioSinkType value);
 
-  AudioSinkType get type;
-  set type(AudioSinkType value);
 }
-
-
 
 
 
@@ -1526,13 +1525,6 @@ abstract class AudioListener {
     num y,
     num z,
   );
-
-
-
-
-
-// ------------------------------------------------------------------------------------------------------------------
-
 
 
   /// The `setOrientation()` method of the [AudioListener] defines the

@@ -35,7 +35,7 @@ abstract class TauwaInterface
 
 
 
-  factAudioSinkOptionsory newAudioSinkOptions({required AudioSinkType type});
+  AudioSinkOptions newAudioSinkOptions({required AudioSinkType type});
 
 
 
@@ -121,7 +121,7 @@ abstract class TauwaInterface
 
 
 
-  facAudioBufferSourceOptionsory newAudioBufferSourceOptions({
+  AudioBufferSourceOptions newAudioBufferSourceOptions({
     AudioBuffer? buffer,
     num detune,
     bool loop,
@@ -171,7 +171,7 @@ abstract class TauwaInterface
 
 
 
-  facChannelMergerNodetory newChannelMergerNode(
+  ChannelMergerNode newChannelMergerNode(
     BaseAudioContext context, [
     ChannelMergerOptions options,
   ]);
@@ -210,7 +210,7 @@ abstract class TauwaInterface
 
 
 
-  factConstantSourceOptionsry newConstantSourceOptions({num offset});
+  ConstantSourceOptions newConstantSourceOptions({num offset});
   ConvolverNode newConvolverNode(
     BaseAudioContext context, [
     ConvolverOptions options,
@@ -218,7 +218,7 @@ abstract class TauwaInterface
 
 
 
-  factoConvolverOptionsry newConvolverOptions({
+  ConvolverOptions newConvolverOptions({
     int channelCount,
     ChannelCountMode channelCountMode,
     ChannelInterpretation channelInterpretation,
