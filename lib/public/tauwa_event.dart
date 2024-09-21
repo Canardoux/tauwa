@@ -23,10 +23,14 @@ class EventTarget
         
 }
 
+/*
 class EventHandler
 {
 
 }
+*/
+
+typedef EventHandler = Function;
 
 class Event
 {
@@ -38,32 +42,7 @@ class EventInit
 
 }
 
-class HTMLMediaElement // Not the correct place for that !!!!!
-{
-
-}
-
-class MediaStream // Not the correct place for that !!!!
-{
-
-}
-
-class MediaStreamTrack // Not the correct place for that !!!!
-{
-
-}
-
-class Worklet
-{
-
-}
-
-class WorkletGlobalScope
-{
-
-}
-
-class MessagePort
+class MediaElement // Not the correct place for that !!!!!
 {
 
 }

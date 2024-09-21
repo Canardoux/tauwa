@@ -452,7 +452,7 @@ abstract class AudioContext
   /// For more details about media element audio source nodes, check out the
   /// [MediaElementAudioSourceNode] reference page.
   MediaElementAudioSourceNode createMediaElementSource(
-      HTMLMediaElement mediaElement);
+      MediaElement mediaElement);
 
   /// The `createMediaStreamSource()` method of the [AudioContext]
   /// is used to create a new [MediaStreamAudioSourceNode]
@@ -2599,7 +2599,7 @@ abstract class MediaElementAudioSourceNode implements AudioNode {
   /// This stream was specified when the node was first created,
   /// either using the [MediaElementAudioSourceNode.MediaElementAudioSourceNode]
   /// constructor or the [AudioContext.createMediaElementSource] method.
-  HTMLMediaElement get mediaElement;
+  MediaElement get mediaElement;
 }
 
 
@@ -2611,8 +2611,8 @@ abstract class MediaElementAudioSourceNode implements AudioNode {
 
 
 abstract class MediaElementAudioSourceOptions {
-  HTMLMediaElement get mediaElement;
-  set mediaElement(HTMLMediaElement value);
+  MediaElement get mediaElement;
+  set mediaElement(MediaElement value);
 }
 
 
@@ -3670,7 +3670,7 @@ abstract class WaveShaperOptions implements AudioNodeOptions {
 ///
 /// API documentation sourced from
 /// [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/AudioWorklet).
-abstract class AudioWorklet implements Worklet {}
+abstract class AudioWorklet {}
 
 
 
@@ -3699,7 +3699,7 @@ abstract class AudioWorklet implements Worklet {}
 ///
 /// API documentation sourced from
 /// [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletGlobalScope).
-abstract class AudioWorkletGlobalScope implements WorkletGlobalScope {
+abstract class AudioWorkletGlobalScope {
   /// The **`registerProcessor`** method of the
   /// [AudioWorkletGlobalScope] registers a class constructor derived
   /// from [AudioWorkletProcessor] under a specified _name_.
@@ -3849,4 +3849,39 @@ abstract class AudioWorkletProcessor {
   /// > **Note:** The port at the other end of the channel is
   /// > available under the [AudioWorkletNode.port] property of the node.
   MessagePort get port;
+}
+
+
+// =================================================================================================
+//                          Added because of Tau_waweb
+// =================================================================================================
+
+
+class MediaStream // Not the correct place for that !!!!
+{
+
+}
+
+class MediaStreamTrack // Not the correct place for that !!!!
+    {
+
+}
+
+/*
+class Worklet
+{
+
+}
+*/
+
+/*
+class WorkletGlobalScope
+{
+
+}
+*/
+
+class MessagePort
+{
+
 }

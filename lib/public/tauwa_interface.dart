@@ -306,7 +306,7 @@ abstract class TauwaInterface
 
 
   MediaElementAudioSourceOptions newMediaElementAudioSourceOptions(
-      {required HTMLMediaElement mediaElement});
+      {required MediaElement mediaElement});
 
 
 
@@ -475,5 +475,23 @@ abstract class TauwaInterface
     required num sampleRate,
     TauAny renderSizeHint,
   });
+
+
+// =================================================================================================
+//                          Added because of Tau_waweb
+// =================================================================================================
+
+
+  MediaStream newMediaStream();
+
+
+  MediaStreamTrack newMediaStreamTrack();
+
+
+  // Worklet newWorklet()
+  // WorkletGlobalScope newWorkletGlobalScope()
+
+  MessagePort newMessagePort();
+
 
 }
