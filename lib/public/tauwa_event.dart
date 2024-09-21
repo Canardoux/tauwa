@@ -41,8 +41,3 @@ class EventInit
 {
 
 }
-
-class MediaElement // Not the correct place for that !!!!!
-{
-
-}

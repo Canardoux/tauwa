@@ -832,8 +832,9 @@ abstract class AudioNode implements EventTarget {
   /// `AudioNode` (thereby directing the sound data to the specified node) or an
   /// [AudioParam], so that the node's output data is automatically used to
   /// change the value of that parameter over time.
-  AudioNode? connect(
-    TauObject destinationNodeOrDestinationParam, [
+  AudioNode connect(
+    AudioNode destinationNodeOrDestinationParam, //TauObject destinationNodeOrDestinationParam,
+   [
     int output,
     int input,
   ]);
@@ -841,7 +842,7 @@ abstract class AudioNode implements EventTarget {
   /// The **`disconnect()`** method of the [AudioNode] lets you
   /// disconnect one or more nodes from the node on which the method is called.
   void disconnect([
-    TauAny destinationNodeOrDestinationParamOrOutput,
+    AudioNode destinationNodeOrDestinationParamOrOutput, // TauAny destinationNodeOrDestinationParamOrOutput,
     int output,
     int input,
   ]);
@@ -3857,13 +3858,17 @@ abstract class AudioWorkletProcessor {
 // =================================================================================================
 
 
-class MediaStream // Not the correct place for that !!!!
+class MediaElement
+{
+}
+
+class MediaStream
 {
 
 }
 
-class MediaStreamTrack // Not the correct place for that !!!!
-    {
+class MediaStreamTrack
+{
 
 }
 
