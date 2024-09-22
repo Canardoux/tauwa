@@ -44,9 +44,10 @@ typedef TauObject = Object;
 typedef TauUint8Array = Uint8List;
 typedef TauHighResTimeStamp = double;
 
-typedef DecodeErrorCallback = Function;
-typedef DecodeSuccessCallback = Function;
-typedef AudioWorkletProcessorConstructor = Function;
+typedef EventHandler = void Function();
+typedef DecodeErrorCallback = void Function();
+typedef DecodeSuccessCallback = void Function();
+typedef AudioWorkletProcessorConstructor = void Function();
 typedef AudioContextState = String;
 typedef AudioContextRenderSizeCategory = String;
 typedef AudioContextLatencyCategory = String;
@@ -3796,8 +3797,8 @@ abstract class AudioWorkletNode implements AudioNode {
   /// > available under the [AudioWorkletProcessor.port] property of the
   /// > processor.
   MessagePort get port;
-  EventHandler get onprocessorerror;
-  set onprocessorerror(EventHandler value);
+  EventHandler get onProcessorError;
+  set onProcessorError(EventHandler value);
 }
 
 

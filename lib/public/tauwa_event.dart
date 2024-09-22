@@ -30,7 +30,6 @@ class EventHandler
 }
 */
 
-typedef EventHandler = Function;
 
 class Event
 {
