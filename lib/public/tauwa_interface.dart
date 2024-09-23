@@ -451,6 +451,7 @@ abstract class TauwaInterface
 
 
 
+
   AudioWorkletNodeOptions newAudioWorkletNodeOptions({
     int channelCount,
     ChannelCountMode channelCountMode,
@@ -458,8 +459,8 @@ abstract class TauwaInterface
     int numberOfInputs,
     int numberOfOutputs,
     TauArray<TauNumber> outputChannelCount,
-    TauObject parameterData,
-    TauObject processorOptions,
+    ParameterData parameterData,
+    ProcessorOptions processorOptions,
   });
 
 
@@ -485,13 +486,13 @@ abstract class TauwaInterface
   MediaStream newMediaStream();
 
 
-  MediaStreamTrack newMediaStreamTrack();
+  // MediaStreamTrack newMediaStreamTrack();
 
 
   // Worklet newWorklet()
   // WorkletGlobalScope newWorkletGlobalScope()
 
-  MessagePort newMessagePort();
+  // MessagePort newMessagePort();
 
 
 }

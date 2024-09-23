@@ -3808,6 +3808,17 @@ abstract class AudioWorkletNode implements AudioNode {
 // ------------------------------------------------------------------------------------------------------------------
 
 
+abstract class ProcessorOptions //implements AudioNodeOptions
+{
+
+}
+
+
+abstract class ParameterData
+{
+
+}
+
 
 abstract class AudioWorkletNodeOptions implements AudioNodeOptions {
 
@@ -3817,10 +3828,10 @@ abstract class AudioWorkletNodeOptions implements AudioNodeOptions {
   set numberOfOutputs(int value);
   TauArray<TauNumber> get outputChannelCount;
   set outputChannelCount(TauArray<TauNumber> value);
-  TauObject get parameterData;
-  set parameterData(TauObject value);
-  TauObject get processorOptions;
-  set processorOptions(TauObject value);
+  //ParameterData get parameterData;
+  //set parameterData(ParameterData value);
+  //ProcessorOptions get processorOptions;
+  //set processorOptions(ProcessorOptions value);
 }
 
 
@@ -3870,6 +3881,7 @@ class MediaStream
 
 class MediaStreamTrack
 {
+  // !!! Missing many methods, here
 
 }
 
